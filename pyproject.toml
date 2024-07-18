@@ -6,10 +6,29 @@ build-backend = "hatchling.build"
 
 [project]
 name = "example-package-riri"
-version = "0.1.0"
+dynamic = ["version"]
 dependencies = [
   "numpy"
+]
+authors = [
+  { name = "Ritika Giri", email="ritika.giri3@gmail.com"}
+]
+description = "A small example package for INTERSECT 2024"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Private :: Do Not Upload",
 ]
 
 [project.optional-dependencies]
 test = ["pytest"]
+
+[project.urls]
+"Homepage" = "https://ritika-giri.github.io/example-package-riri"
+"Source Code" = "https://github.com/ritika-giri/example-package-riri"
+
+[tool.hatch]
+version.path = "src/example_package_riri/__init__.py"
